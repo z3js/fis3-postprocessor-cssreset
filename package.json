@@ -1,0 +1,25 @@
+{
+  "name": "fis3-postprocessor-cssreset",
+  "version": "0.0.1",
+  "description": "px to rem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z3js/fis3-postprocessor-cssreset.git"
+  },
+  "keywords": [
+    "fis3",
+    "css",
+    "pre",
+    "proccess"
+  ],
+  "author": "lrenc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z3js/fis3-postprocessor-cssreset/issues"
+  },
+  "homepage": "https://github.com/z3js/fis3-postprocessor-cssreset#readme"
+}

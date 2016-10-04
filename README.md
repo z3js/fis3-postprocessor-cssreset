@@ -2,7 +2,7 @@
 
 z3 适配方案
 
-<p align="center">
+<p>
     <a href="https://www.bithound.io/github/z3js/fis3-postprocessor-cssreset">
         <img src="https://www.bithound.io/github/z3js/fis3-postprocessor-cssreset/badges/score.svg" alt="bitHound Overall Score">
     </a>

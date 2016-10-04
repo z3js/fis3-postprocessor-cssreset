@@ -2,6 +2,8 @@
 
 z3 适配方案
 
+node 版本 >= 4.4
+
 ### why use cssreset?
 
 ### 开始

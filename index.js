@@ -4,6 +4,7 @@ const eol = require('os').EOL;
 // 默认设置
 var defaults = {
     rootFontSize: 16,
+    defaultDpr: 2,
     ignore: [
         'font-size',
         'font'
@@ -30,14 +31,22 @@ function merge(type, arr, opts) {
     }
 }
 
-function toRem(opts, str) {
+function tranform(opts, str, type) {
     // console.log(str);
     if (str === undefined || str === null) {
         return str;
     }
     return str.replace(/\d+.?(\d*)px/g, function(item) {
-        return parseFloat(item) / opts.rootFontSize + 'rem';
+        var rate = (type === 'rem' ? opts.rootFontSize * opts.defaultDpr : opts.defaultDpr);
+        return parseFloat(item) / rate + type;
     });
+}
+
+function toPx(opts, str) {
+    if (str === undefined || str === null) {
+        return str;
+    }
+    return str.replace()
 }
 // 从ignore中删除reset
 function removeReset(opts) {
@@ -153,24 +162,22 @@ module.exports = function(content, file, setting) {
         }
         // 以px结尾
         if (hasPxComment(line, lines[idx + 1])) {
-            res.push(line);
+            res.push(opts, line, 'px');
             return;
         }
         // 分析当前行
         var arr = formatLine(line);
         var temp = [];
         arr.forEach(function(sub, i) {
-            if (sub.indexOf(':')) {
+            if (~sub.indexOf(':')) {
                 // 注意也有可能是伪类或者伪元素
                 var prefix = trim(sub.split(':')[0]);
-                if (~opts.ignore.indexOf(prefix)) {
-                    temp.push(sub);
-                } else if (/^\/\*\s*px\s*\*\/$/.test(arr[i + 1])) {
-                    // 判断下一项是否是px注释
-                    temp.push(sub);
+                if (~opts.ignore.indexOf(prefix) ||
+                    /^\/\*\s*px\s*\*\/$/.test(arr[i + 1])) {
+                    temp.push(tranform(opts, sub, 'px'));
                 } else {
                     // 替换px为rem
-                    temp.push(toRem(opts, sub));
+                    temp.push(tranform(opts, sub, 'rem'));
                 }
             } else {
                 // 说明该项不包含样式

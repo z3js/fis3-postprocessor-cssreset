@@ -2,7 +2,7 @@
 
 z3 适配方案
 
-node 版本 >= 4.4
+![](https://travis-ci.org/z3js/fis3-postprocessor-cssreset.svg)
 
 ### why use cssreset?
 

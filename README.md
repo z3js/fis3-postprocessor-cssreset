@@ -10,7 +10,7 @@ z3 适配方案
         <img src="https://travis-ci.org/z3js/fis3-postprocessor-cssreset.svg">
     </a>
     <a href="javascript:;">
-        <img src="https://img.shields.io/badge/%E5%88%9A-100%25-orange.svg">
+        <img src="https://img.shields.io/badge/%E5%88%9A%E5%93%A5js-passing-blue.svg">
     </a>
 </p>
 

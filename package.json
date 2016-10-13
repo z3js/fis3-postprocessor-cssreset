@@ -1,10 +1,10 @@
 {
   "name": "fis3-postprocessor-cssreset",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "px to rem",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'done'"
+    "test": ""
   },
   "repository": {
     "type": "git",

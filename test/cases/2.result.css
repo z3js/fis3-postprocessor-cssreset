@@ -1,0 +1,20 @@
+.container {
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid red;
+    color: red;
+    padding-left: 0.8333333333333334rem;
+}
+.container:after
+ {
+    content: ' ';
+    width: 1.25rem;
+    height: 1.2916666666666667rem;
+    line-height: 15px; /*  px */
+    border: 1px solid blue;
+}
+
+p {
+    line-height: 10px;/*px*/
+    border-right: 2px solid green;
+}

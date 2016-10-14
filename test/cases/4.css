@@ -1,0 +1,33 @@
+.container {
+    margin: 0 auto;
+    font-size: 28px;
+    border: 1px solid red;
+    color: red;
+    padding-left: 20px;
+}
+.container:after
+ {
+    content: ' ';
+    width: 30px;
+    height: 31px;
+    line-height: 30px; /*  px */
+    border: 1px solid blue;
+}
+
+p {
+    line-height: 20px;/*px*/
+    border-right: 2px solid green;
+}
+.article {
+    font-size: 28px; display: block;margin-bottom: 14px;
+}
+.article .amount,
+.article .count
+
+{
+    color: red;font-size:25px;margin-left: 2px;/*no*/display: inline-block;
+    /*
+     * 我是注释
+     */
+    padding: 4px; /* no */
+}

@@ -1,0 +1,40 @@
+.container {
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid red;
+    color: red;
+    padding-left: 0.625rem;
+}
+.container:after
+ {
+    content: ' ';
+    width: 0.9375rem;
+    height: 0.96875rem;
+    line-height: 15px; /*  px */
+    border: 1px solid blue;
+}
+
+p {
+    line-height: 10px;/*px*/
+    border-right: 2px solid green;
+}
+.article {
+    font-size: 14px; display: block;margin-bottom: 0.4375rem;
+}
+.article .amount,
+.article .count
+
+{
+    color: red;font-size:12px;margin-left: 2px;/*no*/display: inline-block;
+    /*
+     * 我是注释
+     */
+    padding: 4px; /* no */
+}
+.section{position: absolute;top:0.625rem;right:10px;/*px */ margin-left:5px; /* no*/background: url('./a.png') 5px 5px no-repeat}
+.section:first-child{font-size: 9px/*我是注释
+    balabala...
+*/
+line-height: 0.5rem;
+
+}

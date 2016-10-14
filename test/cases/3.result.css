@@ -1,0 +1,23 @@
+.container {
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid red;
+    color: red;
+    padding-left: 0.7142857142857143rem;
+}
+.container:after
+ {
+    content: ' ';
+    width: 1.0714285714285714rem;
+    height: 1.1071428571428572rem;
+    line-height: 15px; /*  px */
+    border: 1px solid blue;
+}
+
+p {
+    line-height: 10px;/*px*/
+    border-right: 2px solid green;
+}
+.article {
+    font-size: 14px; display: block;margin-bottom: 0.5rem;
+}

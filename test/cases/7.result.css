@@ -1,0 +1,65 @@
+.container {
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid red;
+    color: red;
+    padding-left: 0.625rem;
+}
+.container:after
+ {
+    content: ' ';
+    width: 0.9375rem;
+    height: 0.96875rem;
+    line-height: 15px; /*  px */
+    border: 1px solid blue;
+}
+
+p {
+    line-height: 10px;/*px*/
+    border-right: 1px solid green;
+}
+.article {
+    font-size: 14px; display: block;margin-bottom: 0.4375rem;
+}
+.article .amount,
+.article .count
+
+{
+    color: red;font-size:12px;margin-left: 2px;/*no*/display: inline-block;
+    /*
+     * 我是注释
+     */
+    padding: 4px; /* no */
+}
+.section{position: absolute;top:0.625rem;right:10px;/*px */ margin-left:5px; /* no*/background: url('./a.png') 0.3125rem 0.3125rem no-repeat}
+.section:first-child{font-size: 9px/*我是注释
+    balabala...
+*/
+line-height: 0.5rem;
+
+}
+pre {
+    display: block;
+    padding: 0.296875rem;
+    margin: 0 0 0.3125rem;
+    font-size: 6px; /*px*/
+    line-height: 0.625rem;
+    word-break: break-all;word-wrap: break-word;
+    white-space: pre;white-space: pre-wrap;
+    background-color: #f5f5f5;
+    /* border: 0.03125rem solid #ccc; */
+    border: 1px solid #000;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.a,
+.b,
+.c, .d,
+.e:after,
+.e::before
+{
+    border-right-width: 5px;border-left-width: 10px;
+    border-top-width: 10px;
+    border-bottom: 10px solid #ccc;
+}

@@ -4,7 +4,7 @@
   "description": "px to rem",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony ./test/test.js"
+    "test": "mocha --harmony ./test/{parser.test,util.test}.js"
   },
   "repository": {
     "type": "git",

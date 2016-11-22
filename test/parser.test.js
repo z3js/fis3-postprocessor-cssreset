@@ -1,6 +1,6 @@
-const fs     = require('fs');
-const co     = require('co');
-const path   = require('path');
+const fs = require('fs');
+const co = require('co');
+const path = require('path');
 const assert = require('assert');
 
 const parser = require('..');
@@ -12,11 +12,12 @@ const encoding = {
 const basePath = path.join(__dirname, './cases');
 
 function readFile(p) {
-    return new Promise(function(resolve, reject) {
-        fs.readFile(p, encoding, function(err, data) {
+    return new Promise(function (resolve, reject) {
+        fs.readFile(p, encoding, function (err, data) {
             if (err) {
                 reject(err);
-            } else {
+            }
+            else {
                 resolve(data);
             }
         });
@@ -52,15 +53,15 @@ var testList = [
     }
 ];
 
-for (var i = 0; i < testList.length; i ++) {
-    describe('test' + i, function() {
+for (var i = 0; i < testList.length; i++) {
+    describe('test' + i, function () {
         // node 4.4不支持let，因此需要一个闭包
-        (function(i) {
+        (function (i) {
             var kase = testList[i];
-            it('should work', function() {
-                var getData = function * () {
-                    var actual   = yield readFile(path.join(basePath, i + 1 + '.css'));
-                    var expected = yield readFile(path.join(basePath, i + 1 + '.result.css'));
+            it('should work', function () {
+                var getData = function* () {
+                    var actual = yield readFile(path.join(basePath, i + 1 + '.style'));
+                    var expected = yield readFile(path.join(basePath, i + 1 + '.result.style'));
                     assert.equal(parser(actual, null, kase), expected);
                 };
                 return co(getData);

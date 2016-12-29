@@ -52,7 +52,7 @@ npm install fis3-postprocessor-cssreset -g
 
 ```javascript
 fis.match('*.{less,css}', {
-    postprocessor: fis.plugin('css-reset')
+    postprocessor: fis.plugin('cssreset')
 });
 
 ```
@@ -62,7 +62,7 @@ fis.match('*.{less,css}', {
 * ``rootFontSize`` 指定根节点字体大小, 默认为 **16**
 ```javascript
 fis.match('*.{less,css}', {
-    postprocessor: fis.plugin('css-reset', {
+    postprocessor: fis.plugin('cssreset', {
         rootFontSize: 10
     })
 });
@@ -71,7 +71,7 @@ fis.match('*.{less,css}', {
 * ``ignore`` 对特定属性设置不转换规则
 ```javascript
 fis.match('*.{less,css}', {
-    postprocessor: fis.plugin('css-reset', {
+    postprocessor: fis.plugin('cssreset', {
         ignore: {
             // 只除以dpr不转换单位
             px: [
@@ -90,7 +90,7 @@ fis.match('*.{less,css}', {
 * ``regain`` 恢复通过ignore设置的规则
 ```javascript
 fis.match('*.{less,css}', {
-    postprocessor: fis.plugin('css-reset', {
+    postprocessor: fis.plugin('cssreset', {
         regain: {
             px: [
                 'font*'

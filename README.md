@@ -3,9 +3,6 @@
 H5适配方案
 
 <p>
-    <a href="https://www.bithound.io/github/z3js/fis3-postprocessor-cssreset">
-        <img src="https://www.bithound.io/github/z3js/fis3-postprocessor-cssreset/badges/score.svg" alt="bitHound Overall Score">
-    </a>
     <a href="https://travis-ci.org/z3js/fis3-postprocessor-cssreset" alt="travis">
         <img src="https://travis-ci.org/z3js/fis3-postprocessor-cssreset.svg">
     </a>
